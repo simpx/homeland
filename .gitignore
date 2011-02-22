@@ -11,3 +11,4 @@ public/topics
 public/topics/**/*
 .redcar
 Gemfile.lock
+public/google*.html
