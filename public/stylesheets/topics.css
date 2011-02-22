@@ -19,6 +19,7 @@
 .topics .topic td p.info a:visited { color:#999; }
 .topics .body { line-height:160%; font-size:14px; margin-top:8px;}
 .topics .body p { margin-bottom:10px; }
+.topics .body p img { max-width:680px;}
 #topics .topic td.replies { width:60px; text-align:right; vertical-align:middle; }
 .topics .topic .replies a.count,
 .topics .topic .replies a.count:visited { line-height: 12px; font-weight: bold; color: white; 
@@ -67,6 +68,7 @@
 #replies .reply .info .time { float:right; text-align:right; }
 #replies .reply .info a.reply_link img { vertical-align:middle;}
 #replies .reply .body { line-height:180%; font-size:14px; text-overflow: ellipsis;}
+#replies .reply .body p img { max-width:625px; }
 
 .edit_tools { float:right; margin-bottom:3px;}
 

@@ -71,7 +71,7 @@
               <span class="time"><%= i + 1 %>楼, 回复于 <%= time_ago_in_words(reply.created_at) %>前 <a href="#" onclick="return reply(<%= i + 1 %>);" title="回复此楼" class="reply_link"><%= image_tag("reply.png") %></a></span>
             </div>
             <div class="body">
-              <%= format_topic_body(reply.body,"",false) %>
+              <%= format_topic_body(reply.body,"") %>
             </div>
           </td>
         </tr>
