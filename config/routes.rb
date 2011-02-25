@@ -1,6 +1,6 @@
 Homeland::Application.routes.draw do
-  
-
+    
+  match "/uploads/*path" => "gridfs#serve"
   resources :notes
 
   root :to => "topics#index"

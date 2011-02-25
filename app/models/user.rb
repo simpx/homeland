@@ -42,18 +42,19 @@ class User < ActiveRecord::Base
 	rescue => e
 		logger.error { e }
   end
-  
+    
   # 封面图
-  has_attached_file :avatar,
-    :default_style => :normal,
-    :styles => {
-      :small => "16x16#",
-      :normal => "48x48#",
-      :large => "80x80#",
-    },
-    :url => "#{APP_CONFIG['upload_url']}/:class/:attachment/:hashed_path/:id_:style.jpg",
-    :path => "#{APP_CONFIG['upload_root']}/:class/:attachment/:hashed_path/:id_:style.jpg",
-    :default_url => "avatar/:style.jpg"    
+  # has_attached_file :avatar,
+  #   :default_style => :normal,
+  #   :styles => {
+  #     :small => "16x16#",
+  #     :normal => "48x48#",
+  #     :large => "80x80#",
+  #   },
+  #   :url => "#{APP_CONFIG['upload_url']}/:class/:attachment/:hashed_path/:id_:style.jpg",
+  #   :path => "#{APP_CONFIG['upload_root']}/:class/:attachment/:hashed_path/:id_:style.jpg",
+  #   :default_url => "avatar/:style.jpg"    
+  mount_uploader :avatar, AvatarUploader
 
   STATE = {
     :normal => 1,

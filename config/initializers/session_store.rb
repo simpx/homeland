@@ -2,7 +2,7 @@
 # Be sure to restart your server when you modify this file.
 
 Homeland::Application.config.session_store :cookie_store, 
-                            :key => '_homeland_session',
+                            :key => '_homeland_session1',
                             :expire_after => 86400*90
 
 # Use the database for sessions instead of the cookie-based default,

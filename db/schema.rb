@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110211041644) do
+ActiveRecord::Schema.define(:version => 20110225054459) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider",                   :null => false
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(:version => 20110211041644) do
 
   create_table "photos", :force => true do |t|
     t.string   "title",                          :null => false
-    t.string   "image_file_name",                :null => false
+    t.string   "image",                          :null => false
     t.integer  "image_file_size", :default => 0, :null => false
     t.integer  "user_id"
     t.datetime "created_at"
@@ -102,7 +102,7 @@ ActiveRecord::Schema.define(:version => 20110211041644) do
     t.string   "location"
     t.string   "bio"
     t.string   "website"
-    t.string   "avatar_file_name"
+    t.string   "avatar"
     t.boolean  "verified",            :default => false, :null => false
     t.integer  "state",               :default => 1,     :null => false
     t.string   "qq"
