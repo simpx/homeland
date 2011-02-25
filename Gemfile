@@ -11,7 +11,7 @@ gem "oa-openid", '0.2.0.beta3'
 # gem 'aws-s3', :require => 'aws/s3'
 gem 'sqlite3'
 gem 'smurf-huacnlee', :require => "smurf"
-gem 'qq-omniauth' #, :path => "/home/jason/work/qq-omniauth"
+# gem 'qq-omniauth' #, :path => "/home/jason/work/qq-omniauth"
 gem 'carrierwave'
 gem 'mini_magick'
 gem "mongoid", "2.0.0.rc.7"

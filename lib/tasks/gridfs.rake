@@ -30,7 +30,6 @@ end
 class GridFsImporter
   def initialize
     @grid = Grid.new(Mongoid.database)
-    @gridf = GridFileSystem.new(Mongoid.database)
   end
   
   def put(model, attr_name, style)    
@@ -45,8 +44,8 @@ class GridFsImporter
     end
     
     
-    if old = @gridf.open(file_name, 'r')
-      puts "-- skip, old #{old.filename} existed."
+    if old = @grid.exist?({'filename' => file_name})
+      puts "-- skip, old #{old['filename']} existed."
     else
       begin
         id = @grid.put(File.open(real_file_name), :filename => file_name)      
