@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Homeland by huacnlee</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Homeland</h1>
+        <p>以 Rails Engine 的方式的嵌入式论坛组件</p>
+
+        <p class="view"><a href="https://github.com/huacnlee/homeland">View the Project on GitHub <small>huacnlee/homeland</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/huacnlee/homeland/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/huacnlee/homeland/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/huacnlee/homeland">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>A new style forum for tiny community as Rails Engine. You can mount this in you apps.</p>
+
+<h2>Requrements</h2>
+
+<ul>
+<li>Rails 3.1</li>
+<li>Mongoid 2.4.x or 3.0.0.rc</li>
+<li>rails_autolink</li>
+</ul><h2>Install</h2>
+
+<ol>
+<li>
+<p>in you Gemfile:</p>
+
+<div class="highlight"><pre><span class="n">gem</span> <span class="s2">"homeland"</span>
+</pre></div>
+</li>
+<li>
+<p>Install thought this commands:</p>
+
+<div class="highlight"><pre>rails g homeland:install
+</pre></div>
+</li>
+<li>
+<p>change you application.html.erb</p>
+
+<p>before:</p>
+
+<div class="highlight"><pre><span class="x"> </span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">"Home"</span><span class="p">,</span> <span class="n">root_path</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x"> </span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">"Posts"</span><span class="p">,</span> <span class="n">posts_path</span> <span class="cp">%&gt;</span><span class="x"></span>
+</pre></div>
+
+<p>after:</p>
+
+<div class="highlight"><pre><span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">"Home"</span><span class="p">,</span> <span class="n">main_app</span><span class="o">.</span><span class="n">root_path</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">"Home"</span><span class="p">,</span> <span class="n">main_app</span><span class="o">.</span><span class="n">posts_path</span> <span class="cp">%&gt;</span><span class="x"></span>
+</pre></div>
+</li>
+<li>
+<p>Change you routes.rb to add this:</p>
+
+<div class="highlight"><pre><span class="n">mount</span> <span class="no">Homeland</span><span class="o">::</span><span class="no">Engine</span><span class="p">,</span> <span class="ss">:at</span> <span class="o">=&gt;</span> <span class="s2">"/bbs"</span>
+</pre></div>
+</li>
+</ol><h2>Generate views to custom</h2>
+
+<div class="highlight"><pre>rails g homeland:views
+</pre></div>
+
+<h2>How to test Homeland</h2>
+
+<div class="highlight"><pre><span class="nv">$ </span>bundle install
+<span class="nv">$ </span><span class="nb">cd </span>spec/dummy
+<span class="nv">$ </span>rails s
+INFO  WEBrick 1.3.1
+INFO  ruby 1.9.3 <span class="o">(</span>2012-04-20<span class="o">)</span> <span class="o">[</span>x86_64-darwin11.4.0<span class="o">]</span>
+INFO  WEBrick::HTTPServer#start: <span class="nv">pid</span><span class="o">=</span>9720 <span class="nv">port</span><span class="o">=</span>3000
+</pre></div>
+
+<h2>Demo App</h2>
+
+<ul>
+<li><a href="http://720p.so/bbs">http://720p.so/bbs</a></li>
+</ul><hr><p>Thanks <a href="http://www.v2ex.com/?r=huacnlee">V2EX</a> forum idea.
+A new style forum for tiny community as Rails Engine. You can mount this in you apps.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/huacnlee">huacnlee</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-9745660-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
