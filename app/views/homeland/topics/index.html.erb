@@ -29,7 +29,7 @@
         <a href="<%= recent_topics_path %>">查看更多最近发布的帖子...</a>
       </div>
     <% elsif params[:action] == "node" or params[:action] == "search" %>
-      <%= will_paginate @topics %>
+      <%= paginate @topics %>
     <% end %>
 	</div>
 	<% if params[:action] == "index" %>

@@ -29,7 +29,7 @@ module Homeland
 
     def node
       @node = Node.find(params[:id])
-      @topics = @node.topics.last_actived.includes(:user).paginate(:page => params[:page],:per_page => 50)
+      @topics = @node.topics.last_actived.includes(:user).page(params[:page]).per(50)
 
       render :action => "index"
     end
